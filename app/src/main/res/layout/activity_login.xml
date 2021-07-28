@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+    <TextView
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="LOGIN"
+        android:textAlignment="center" android:textSize="35sp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:padding="10dp"
+        android:src="@drawable/user3"
+        android:layout_height="200dp"></ImageView>
+    
+    <EditText
+        android:id="@+id/check-phone"
+        android:layout_width="300dp"
+        android:inputType="number"
+        android:hint="Phone" android:textAlignment="center" android:textSize="20dp"
+        android:layout_height="65dp"></EditText>
+    <EditText
+        android:id="@+id/check-pass"
+        android:layout_width="300dp"
+        android:inputType="textPassword"
+        android:hint="Password" android:textAlignment="center" android:textSize="20dp"
+        android:layout_height="65dp"></EditText>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:text="LOGIN"
+        app:backgroundTint="@android:color/holo_blue_dark"></com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:id="@+id/createacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I don't have an Account"
+        android:textAlignment="center"
+        android:textSize="25dp"/>
+
+</LinearLayout>
