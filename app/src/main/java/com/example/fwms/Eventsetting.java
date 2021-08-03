@@ -8,12 +8,22 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Eventsetting extends AppCompatActivity {
-ImageView createevent;
+ImageView createevent,viewevents;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventsetting);
         createevent=findViewById(R.id.createev);
+        viewevents=findViewById(R.id.viewevent);
+
+//        viewevents.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Eventsetting.this,ViewEvent.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
         createevent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,5 +32,6 @@ ImageView createevent;
                 startActivity(in);
             }
         });
+
     }
 }

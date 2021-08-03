@@ -20,6 +20,7 @@ ImageView mangaevent;
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,Eventsetting.class);
                 startActivity(i);
+                finish();
             }
         });
     }
