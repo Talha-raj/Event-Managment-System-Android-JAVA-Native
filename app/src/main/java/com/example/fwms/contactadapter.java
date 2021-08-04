@@ -75,8 +75,8 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
     private class MyonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            int itemposition = recyclerView.getChildLayoutPosition(v);
-            String item = contactsList.get(itemposition).getEvent_name();
+            int itemPosition = recyclerView.getChildLayoutPosition(v);
+            String item = contactsList.get(itemPosition).getEvent_name();
             Toast.makeText(context, item, Toast.LENGTH_SHORT).show();
         }
     }

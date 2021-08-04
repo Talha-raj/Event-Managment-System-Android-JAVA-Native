@@ -44,35 +44,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public List<Contacts> getAllcontacts(){
 
-
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME;
         Cursor cursor = db.rawQuery(query, null);
         while (cursor.moveToNext()){
             int index1 = cursor.getColumnIndex(DatabaseHelper.COlS1);
-            int rowid = cursor.getInt(index1);
+            int id = cursor.getInt(index1);
 
             int index2 = cursor.getColumnIndex(DatabaseHelper.COlS2);
-            String rownametype = cursor.getString(index2);
+            String Event_Type = cursor.getString(index2);
 
             int index3 = cursor.getColumnIndex(DatabaseHelper.COlS3);
-            String rowname = cursor.getString(index3);
+            String Event_name = cursor.getString(index3);
 
 
             int index5 = cursor.getColumnIndex(DatabaseHelper.COlS4);
-            String rowtime = cursor.getString(index5);
+            String Event_dattime = cursor.getString(index5);
 
             int index6 = cursor.getColumnIndex(DatabaseHelper.COlS6);
-            String rowcontact = cursor.getString(index6);
+            String Event_contact = cursor.getString(index6);
 
             int index7 = cursor.getColumnIndex(DatabaseHelper.COlS7);
-            String rowiddess = cursor.getString(index7);
-            Contacts contacts = new Contacts(rowid,rownametype,rowname,rowtime,rowcontact,rowiddess);
+            String Event_describtiont = cursor.getString(index7);
+            Contacts contacts = new Contacts(id,Event_Type,Event_name,Event_dattime,Event_contact,Event_describtiont);
                 contactsList.add(contacts);
 
         }
         return contactsList;
-
 
     }
 

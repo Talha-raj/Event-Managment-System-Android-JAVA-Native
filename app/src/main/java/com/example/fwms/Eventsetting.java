@@ -16,22 +16,23 @@ ImageView createevent,viewevents;
         createevent=findViewById(R.id.createev);
         viewevents=findViewById(R.id.viewevent);
 
-        viewevents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Eventsetting.this,ViewEvent.class);
-                startActivity(i);
-                finish();
-            }
-        });
 
         createevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(Eventsetting.this,CreateEvent.class);
-                startActivity(in);
+                Intent i = new Intent(Eventsetting.this,CreateEvent.class);
+                startActivity(i);
             }
         });
+
+//        viewevents.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Eventsetting.this,ViewEvent.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
     }
 }

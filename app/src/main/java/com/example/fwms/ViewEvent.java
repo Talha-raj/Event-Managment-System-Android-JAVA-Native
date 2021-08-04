@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ViewEvent extends AppCompatActivity {
-RecyclerView view;
+RecyclerView rview;
 contactadapter contactsAdapter;
 RecyclerView.LayoutManager layoutManager;
 List<Contacts> contactsList = new ArrayList<>();
@@ -22,12 +22,12 @@ DatabaseHelper databaseAdapter;
         getSupportActionBar().hide();
         databaseAdapter = new DatabaseHelper(this);
         contactsList = databaseAdapter.getAllcontacts();
-        view = findViewById(R.id.viewevent);
-        view.setHasFixedSize(true);
+        rview = findViewById(R.id.viewevent);
+        rview.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
-        contactsAdapter = new contactadapter(this,contactsList , view);
-        view.setAdapter(contactsAdapter);
-        view.setLayoutManager(layoutManager);
+        contactsAdapter = new contactadapter(this,contactsList , rview);
+        rview.setAdapter(contactsAdapter);
+        rview.setLayoutManager(layoutManager);
 
     }
 }
