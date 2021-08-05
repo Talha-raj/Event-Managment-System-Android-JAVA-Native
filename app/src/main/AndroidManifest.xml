@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FWMS">
-        <activity android:name=".Splashscreen"></activity>
+        <activity android:name=".Login"></activity>
         <activity android:name=".UserLogin" />
         <activity android:name=".UserRegister" />
         <activity android:name=".UserDashboard" />
@@ -21,7 +21,7 @@
         <activity android:name=".CreateEvent" />
         <activity android:name=".registration" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Login">
+        <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
