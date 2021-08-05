@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             TextView rowId;
             TextView rowetypename;
             TextView rowename;
+            //CalendarView datetime;
             TextView rowdatetime;
             TextView rowcontact;
             TextView rowdesc;
@@ -58,9 +60,9 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
     public void onBindViewHolder(@NonNull contactadapter.ViewHolder holder, int i) {
         Contacts contact = contactsList.get(i);
         holder.rowId.setText(""+contact.getId());
-        holder.rowetypename.setText(""+contact.getEvent_name());
+        holder.rowetypename.setText(""+contact.getEvent_type());
         holder.rowename.setText(""+contact.getEvent_name());
-        holder.rowdatetime.setText(""+contact.getEvent_dattime());
+        holder.rowdatetime.setText(contact.getEvent_dattime());
         holder.rowcontact.setText(""+contact.getEvent_contact());
         holder.rowdesc.setText(""+contact.getEvent_describtiont());
 

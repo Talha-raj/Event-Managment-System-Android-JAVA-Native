@@ -9,7 +9,7 @@
     tools:context=".Login">
     <TextView
         android:fontFamily="sans-serif-smallcaps"
-        android:text="LOGIN"
+        android:text="User LOGIN"
         android:textAlignment="center" android:textSize="35sp"
         android:layout_width="match_parent"
         android:layout_height="60dp"/>
@@ -18,29 +18,29 @@
         android:padding="10dp"
         android:src="@drawable/user3"
         android:layout_height="200dp"></ImageView>
-    
+
     <EditText
-        android:id="@+id/check-email"
+        android:id="@+id/useremail"
         android:layout_width="300dp"
         android:inputType="textEmailAddress"
-        android:hint="Email" android:textAlignment="center" android:textSize="20dp"
+        android:hint="Your Email" android:textAlignment="center" android:textSize="20dp"
         android:layout_height="65dp"></EditText>
     <EditText
-        android:id="@+id/check-pass"
+        android:id="@+id/userpass"
         android:layout_width="300dp"
         android:inputType="textPassword"
-        android:hint="Password" android:textAlignment="center" android:textSize="20dp"
+        android:hint="Your Password" android:textAlignment="center" android:textSize="20dp"
         android:layout_height="65dp"></EditText>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login"
+        android:id="@+id/userlogin"
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:text="LOGIN"
         app:backgroundTint="@android:color/holo_blue_dark"></com.google.android.material.button.MaterialButton>
 
     <TextView
-        android:id="@+id/createacc"
+        android:id="@+id/create_useracc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I don't have an Account"

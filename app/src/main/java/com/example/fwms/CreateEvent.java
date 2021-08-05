@@ -9,13 +9,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class CreateEvent extends AppCompatActivity {
 
     Button saveevent;
-    EditText name, type, time, noofguest, contact, desc;
+    EditText name, type, noofguest, contact, desc;
+    DatePicker time;
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
 
@@ -40,24 +42,23 @@ public class CreateEvent extends AppCompatActivity {
             public void onClick(View v) {
                 String dataname = name.getText().toString();
                 String dataetype = type.getText().toString();
-                String dataetime = time.getText().toString();
+                String dataetime = time.getDayOfMonth()+"/"+time.getMonth()+"/"+time.getYear();
                 String dataeguest= noofguest.getText().toString();
                 String dataecontact= contact.getText().toString();
                 String dataedesc= desc.getText().toString();
                 db=openHelper.getWritableDatabase();
-                if(name.length() !=0 && type.length() !=0 && time.length() !=0
+                if(name.length() !=0 && type.length() !=0
                         && noofguest.length() !=0 && contact.length() !=0 && desc.length() !=0){
                     insertData(dataname, dataetype, dataetime,dataeguest,dataecontact,dataedesc);
                     Toast.makeText(getApplicationContext(), "Event Created Successfully", Toast.LENGTH_LONG).show();
                     name.setText("");
                     type.setText("");
-                    time.setText("");
                     noofguest.setText("");
                     contact.setText("");
                     desc.setText("");
-                    Intent i = new Intent(CreateEvent.this,ViewEvent.class);
-                    startActivity(i);
-                    finish();
+//                    Intent i = new Intent(CreateEvent.this,ViewEvent.class);
+//                    startActivity(i);
+//                    finish();
 
 
                 }

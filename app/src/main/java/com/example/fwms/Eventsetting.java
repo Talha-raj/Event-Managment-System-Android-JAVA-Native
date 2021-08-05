@@ -8,14 +8,16 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Eventsetting extends AppCompatActivity {
-ImageView createevent,viewevents;
+ImageView createevent,viewevents,deleteevent,update_e;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventsetting);
+        getSupportActionBar().hide();
         createevent=findViewById(R.id.createev);
-        viewevents=findViewById(R.id.viewevent);
-
+        viewevents=findViewById(R.id.viewev);
+        deleteevent=findViewById(R.id.delteev);
+        update_e=findViewById(R.id.updateevent);
 
         createevent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,14 +27,32 @@ ImageView createevent,viewevents;
             }
         });
 
-//        viewevents.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(Eventsetting.this,ViewEvent.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
+        viewevents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Eventsetting.this,ViewEvent.class);
+                startActivity(i);
+            }
+        });
+
+        deleteevent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Eventsetting.this,DeleteEvent.class);
+                startActivity(i);
+            }
+        });
+
+        update_e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Eventsetting.this,UpdateEvent.class);
+                startActivity(i);
+            }
+        });
+
+
+
 
     }
 }

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="wrap_content"
+    android:layout_height="310dp"
     android:layout_marginLeft="6dp"
     android:layout_marginTop="6dp"
+    android:background="@drawable/invitationfixed"
     android:layout_marginRight="6dp"
     android:padding="12dp">
 
@@ -13,12 +15,12 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/vid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ID: " />
 
         <TextView
+            android:id="@+id/vid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ID: " />
@@ -26,17 +28,37 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/etypeview"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Event Type: "
+        android:text="Event Type"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/enameview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="cursive"
+        android:text="Event Type"
+        android:textSize="26sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Event Name " />
+
+    <TextView
+        android:id="@+id/etypeview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Name " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date/Time " />
 
     <TextView
         android:id="@+id/edatatimeview"
@@ -45,16 +67,33 @@
         android:text="Date/Time " />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact " />
+
+    <TextView
         android:id="@+id/econtactview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact " />
 
     <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description" />
+    <TextView
         android:id="@+id/edescview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discribtion" />
+        android:text="Description" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Invite"
+        app:backgroundTint="@color/goldy" />
 
 
 </LinearLayout>

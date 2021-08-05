@@ -11,7 +11,6 @@
 
     <TextView
         android:layout_gravity="center"
-        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="67dp"
         android:fontFamily="sans-serif-smallcaps"
@@ -23,44 +22,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-        <EditText
-            android:id="@+id/etype"
-            android:layout_width="410dp"
-            android:layout_height="70dp"
-            android:hint="Event Type"
-            android:textAlignment="center"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/ename"
-            android:layout_width="410dp"
-            android:layout_height="70dp"
-            android:hint="Event Name"
-            android:textAlignment="center"
-            android:textSize="20dp" />
-
-
-        <DatePicker
-            android:id="@+id/etime"
-            android:layout_width="410dp"
-            android:layout_height="70dp"
-            android:calendarViewShown="false"
-            android:hint="Event Date/time"
-            android:inputType="datetime"
-            android:datePickerMode="spinner"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/eguest"
-            android:layout_width="410dp"
-            android:layout_height="70dp"
-            android:hint="No of Guests"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:textSize="20dp" />
+    <EditText
+        android:id="@+id/etypeupdate"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:hint="Event Type"
+        android:textAlignment="center"
+        android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/econtact"
+        android:id="@+id/enameupdate"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:hint="Event Name"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+
+    <EditText
+        android:id="@+id/etimeupdate"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:hint="Event Date/time"
+        android:inputType="datetime"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eguestupdate"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:hint="No of Guests"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/econtactupdate"
         android:layout_width="410dp"
         android:layout_height="70dp"
         android:hint="Contact"
@@ -69,7 +67,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/edes"
+        android:id="@+id/edesupdate"
         android:layout_width="match_parent"
         android:layout_height="136dp"
         android:gravity="top|left"
@@ -81,20 +79,27 @@
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="239dp" />
-
-    <Button
-        android:id="@+id/sharelocation"
-        android:layout_gravity="center"
-        android:layout_width="207dp"
-        android:layout_height="92dp"
-        android:text="Share LOCATION"
+    <EditText
+        android:id="@+id/eventidupdate"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:hint="Event Id For Update"
+        android:inputType="number"
         android:textAlignment="center"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="575dp" />
+        android:textSize="15dp" />
+<!--    <Button-->
+<!--        android:id="@+id/sharelocation"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="207dp"-->
+<!--        android:layout_height="92dp"-->
+<!--        android:text="Share LOCATION"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp"-->
+<!--        tools:layout_editor_absoluteX="80dp"-->
+<!--        tools:layout_editor_absoluteY="575dp" />-->
 
     <Button
-        android:id="@+id/eventdone"
+        android:id="@+id/eventdoneupdate"
         android:layout_width="207dp"
         android:layout_height="78dp"
         android:layout_gravity="center"
