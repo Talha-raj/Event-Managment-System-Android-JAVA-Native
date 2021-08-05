@@ -26,6 +26,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             TextView rowdatetime;
             TextView rowcontact;
             TextView rowdesc;
+            TextView rowloca;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -36,6 +37,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             rowdatetime = itemView.findViewById(R.id.edatatimeview);
             rowcontact = itemView.findViewById(R.id.econtactview);
             rowdesc = itemView.findViewById(R.id.edescview);
+            rowloca = itemView.findViewById(R.id.evlocation);
 
 
         }
@@ -65,6 +67,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
         holder.rowdatetime.setText(contact.getEvent_dattime());
         holder.rowcontact.setText(""+contact.getEvent_contact());
         holder.rowdesc.setText(""+contact.getEvent_describtiont());
+        holder.rowloca.setText(""+contact.getEvent_location());
 
 
     }

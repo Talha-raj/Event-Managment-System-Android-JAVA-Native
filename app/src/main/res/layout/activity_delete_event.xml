@@ -27,10 +27,12 @@
         android:textSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
-<Button
-    android:id="@+id/btn_delte"
-    android:text="Delete" android:textSize="20dp"
-    android:layout_gravity="center"
-    android:layout_width="200dp"
-    android:layout_height="100dp"/>
+
+    <Button
+        android:id="@+id/btn_delte"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:text="Delete"
+        android:textSize="20dp" />
 </LinearLayout>

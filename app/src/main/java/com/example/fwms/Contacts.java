@@ -7,15 +7,17 @@ public class Contacts {
     private String event_name;
     private String event_dattime;
     private String event_contact;
+    private String event_location;
     private String event_describtiont;
 
-    public Contacts(int id, String event_type, String event_name, String event_dattime, String event_contact, String event_describtiont) {
+    public Contacts(int id, String event_type, String event_name, String event_dattime, String event_contact, String event_location, String event_describtiont) {
 
         this.id = id;
         this.event_type = event_type;
         this.event_name = event_name;
         this.event_dattime = event_dattime;
         this.event_contact = event_contact;
+        this.event_location = event_location;
         this.event_describtiont = event_describtiont;
 
     }
@@ -38,6 +40,10 @@ public class Contacts {
 
     public String getEvent_contact() {
         return event_contact;
+    }
+
+    public String getEvent_location() {
+        return event_location;
     }
 
     public String getEvent_describtiont() {

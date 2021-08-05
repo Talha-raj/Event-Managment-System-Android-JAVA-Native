@@ -19,6 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COlS5 = "guests";
     public static final String COlS6 = "contact";
     public static final String COlS7 = "Describtion";
+    public static final String COlS8 = "Location";
     List<Contacts> contactsList = new ArrayList<>();
 
     public DatabaseHelper(Context context) {
@@ -29,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, eventtype TEXT, eventname TEXT, eventtime TEXT, guests TEXT,contact TEXT,Describtion TEXT)");
+        db.execSQL("CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, eventtype TEXT, eventname TEXT, eventtime TEXT, guests TEXT,contact TEXT,Describtion TEXT,Location TEXT)");
 
     }
 
@@ -66,7 +67,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             int index7 = cursor.getColumnIndex(DatabaseHelper.COlS7);
             String Event_describtiont = cursor.getString(index7);
-            Contacts contacts = new Contacts(id,Event_Type,Event_name,Event_dattime,Event_contact,Event_describtiont);
+
+            int index8 = cursor.getColumnIndex(DatabaseHelper.COlS8);
+            String Event_location = cursor.getString(index8);
+
+            Contacts contacts = new Contacts(id,Event_Type,Event_name,Event_dattime,Event_contact,Event_location,Event_describtiont);
                 contactsList.add(contacts);
 
         }

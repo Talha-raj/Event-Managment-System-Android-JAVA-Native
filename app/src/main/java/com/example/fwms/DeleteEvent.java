@@ -2,6 +2,7 @@ package com.example.fwms;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
@@ -29,6 +30,9 @@ EditText text_getid;
              String id = text_getid.getText().toString();
              deleteData(id);
              Toast.makeText(getApplicationContext(), "Event Deleted successfully", Toast.LENGTH_LONG).show();
+             text_getid.setText("");
+             Intent i = new Intent(DeleteEvent.this,ViewEvent.class);
+             startActivity(i);
          }
      });
 

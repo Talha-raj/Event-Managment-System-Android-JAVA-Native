@@ -40,15 +40,15 @@
             android:textSize="20dp" />
 
 
-        <DatePicker
-            android:id="@+id/etime"
-            android:layout_width="410dp"
-            android:layout_height="70dp"
-            android:calendarViewShown="false"
-            android:hint="Event Date/time"
-            android:inputType="datetime"
-            android:datePickerMode="spinner"
-            android:textSize="20dp" />
+    <DatePicker
+        android:id="@+id/etime"
+        android:layout_width="410dp"
+        android:layout_height="73dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:hint="Event Date/time"
+        android:inputType="datetime"
+        android:textSize="20dp" />
 
         <EditText
             android:id="@+id/eguest"
@@ -69,9 +69,18 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/elocation"
+        android:layout_width="410dp"
+        android:layout_height="70dp"
+        android:hint="Get Location"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
         android:id="@+id/edes"
         android:layout_width="match_parent"
-        android:layout_height="136dp"
+        android:layout_height="130dp"
         android:gravity="top|left"
         android:hint="Description..."
         android:inputType="textMultiLine"
@@ -81,17 +90,6 @@
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="239dp" />
-
-    <Button
-        android:id="@+id/sharelocation"
-        android:layout_gravity="center"
-        android:layout_width="207dp"
-        android:layout_height="92dp"
-        android:text="Share LOCATION"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="575dp" />
 
     <Button
         android:id="@+id/eventdone"
