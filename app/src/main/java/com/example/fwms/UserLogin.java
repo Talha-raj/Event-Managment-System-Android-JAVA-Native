@@ -19,6 +19,7 @@ UserDatabasehelper mDatabaseHelper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
+        getSupportActionBar().hide();
             newaccount=findViewById(R.id.create_useracc);
             cuseremail=findViewById(R.id.useremail);
             checkuserpassword=findViewById(R.id.userpass);

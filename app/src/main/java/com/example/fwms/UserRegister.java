@@ -25,6 +25,7 @@ public class UserRegister extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
+        getSupportActionBar().hide();
         User_register=findViewById(R.id.register_userbtn);
         username=findViewById(R.id.reg_username);
         useremail=findViewById(R.id.reg_useremail);
