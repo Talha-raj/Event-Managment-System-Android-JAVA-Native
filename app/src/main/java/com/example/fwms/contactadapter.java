@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
     Context context;
     List<Contacts> contactsList;
     RecyclerView recyclerView;
+    Button listofguest;
     final View.OnClickListener onClickListener = new MyonClickListener();
     public  static class ViewHolder extends RecyclerView.ViewHolder{
             TextView rowId;
@@ -52,7 +54,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
     @Override
     public contactadapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.singledata, viewGroup, false);
+        View view = inflater.inflate(R.layout.activity_singledata, viewGroup, false);
         view.setOnClickListener(onClickListener);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
@@ -83,6 +85,9 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             int itemPosition = recyclerView.getChildLayoutPosition(v);
             String item = contactsList.get(itemPosition).getEvent_name();
             Toast.makeText(context, item, Toast.LENGTH_SHORT).show();
+
         }
+
+
     }
 }

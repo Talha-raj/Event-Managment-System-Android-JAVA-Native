@@ -51,6 +51,11 @@ UserDatabasehelper mDatabaseHelper;
                           Intent inte = new  Intent(UserLogin.this,UserDashboard.class);
                           startActivity(inte);
                       }
+                      else {
+                          Toast.makeText(UserLogin.this, "Email or Password is Incorrect", Toast.LENGTH_LONG).show();
+                                cuseremail.setText("");
+                                checkuserpassword.setText("");
+                      }
                   }
               }
           });

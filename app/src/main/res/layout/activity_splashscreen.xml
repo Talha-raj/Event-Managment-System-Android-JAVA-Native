@@ -8,11 +8,20 @@
     android:layout_height="match_parent"
     android:background="@color/splash"
     tools:context=".Splashscreen">
-    
+
     <ImageView
         android:layout_width="250dp"
-        android:background="@drawable/fwms"
-        android:layout_height="250dp"/>
+        android:layout_height="250dp"
+        android:background="@drawable/fwms" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        app:lottie_speed="4"
+        app:lottie_fileName="loading.json"
+        app:lottie_loop="true" />
 
 
 </LinearLayout>

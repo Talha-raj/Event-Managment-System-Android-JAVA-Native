@@ -6,6 +6,7 @@
     android:layout_height="350dp"
     android:layout_marginLeft="6dp"
     android:layout_marginTop="6dp"
+    android:id="@+id/layoutclick"
     android:background="@drawable/invitationfixed"
     android:layout_marginRight="6dp"
     android:padding="12dp">
@@ -100,11 +101,11 @@
         android:text="Description" />
 
     <Button
+        android:id="@+id/guestlist"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:text="Invite"
         app:backgroundTint="@color/goldy" />
-
 
 </LinearLayout>

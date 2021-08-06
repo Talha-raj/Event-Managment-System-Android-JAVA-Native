@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Vector;
 
 public class UserDatabasehelper extends SQLiteOpenHelper {
 
@@ -79,6 +81,46 @@ public class UserDatabasehelper extends SQLiteOpenHelper {
             return false;
         }
     }
+
+//    public String getData() {
+//
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String query = "SELECT "+COl2+ " FROM " + TABLE_NAME ;
+//        Cursor cursor = db.rawQuery(query, null);
+//        cursor.moveToFirst();
+//        String username=cursor.getString(cursor.getColumnIndex(COl2));
+//        return username;
+//    }
+
+    public List<String> getData(int input){
+        String query="SELECT "+COl2+"  FROM "+TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor =db.rawQuery(query, null);
+
+        List<String> attrStr = new Vector<String>();
+
+        if(cursor.moveToFirst()){
+            do{
+                attrStr.add(cursor.getString(cursor.getColumnIndex(COl2)));
+                Arrays.toString(new List[]{attrStr});
+            }while  (cursor.moveToNext());
+        }
+        while (cursor.moveToNext()){
+
+        }
+        return attrStr;
+    }
+
+//    public String getUsername(){
+//        SQLiteDatabase db = this.getReadableDatabase();
+//    /*Cursor cursor = db.query(TABLE, new String[] {COLUMN_USERNAME, COLUMN_PASSWORD}, COLUMN_USERNAME , null, null, null, null);
+//    cursor.moveToFirst();*/
+//        String selectQuery = "SELECT "+COLUMN_USERNAME+ " FROM " + TABLE ;
+//        Cursor cursor = db.rawQuery(selectQuery, null);
+//        cursor.moveToFirst();
+//        String username=cursor.getString(cursor.getColumnIndex(COLUMN_USERNAME));
+//        return username;
+//    }
 
 
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Guestdata">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:text="Invite Guests"
+        android:textAlignment="center"
+        android:textSize="50dp" />
+
+    <ListView
+        android:id="@+id/guestlistview"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        android:layout_marginTop="100dp" />
+
+    <!--    -->
+<!--    <ListView-->
+<!--        android:id="@+id/guestlistview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"></ListView>-->
+
+
+</RelativeLayout>
