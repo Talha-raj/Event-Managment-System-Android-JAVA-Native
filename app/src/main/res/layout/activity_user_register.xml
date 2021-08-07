@@ -23,7 +23,7 @@
 
 
         <ImageView
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="265dp"
             android:src="@drawable/signup"
             android:layout_width="150dp"
             android:layout_height="100dp" />
@@ -69,9 +69,9 @@
             android:id="@+id/already_useracc"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="I Already Have an Account? "
+            android:text="I Already Have an Account"
             android:textAlignment="center"
-            android:textSize="25dp" />
+            android:textSize="20dp" />
 
 
 

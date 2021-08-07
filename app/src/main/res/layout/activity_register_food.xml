@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RegisterFood">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Order Your Food"
+        android:textAlignment="center"
+        android:textSize="40dp"></TextView>
+
+    <ImageView
+        android:id="@+id/slideview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <EditText
+        android:id="@+id/guestname"
+        android:textAlignment="center"
+        android:hint="Your Name"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"></EditText>
+    <EditText
+        android:id="@+id/regfood"
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:hint="What do you want to Eat give complete details"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="10"
+        android:minLines="6"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="239dp" />
+    <Button
+        android:id="@+id/sendfood"
+        android:text="Send" android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="70dp"></Button>
+
+
+</LinearLayout>

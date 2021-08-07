@@ -10,9 +10,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-ImageView mangaevent;
-ImageButton jumper;
-Button logout;
+    ImageView mangaevent,fooddata;
+    ImageButton jumper;
+    Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ Button logout;
         mangaevent=findViewById(R.id.imageViewe);
         logout=findViewById(R.id.buttonlog);
         jumper=findViewById(R.id.jumplogin);
+        fooddata=findViewById(R.id.foodmenue);
         mangaevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,15 +40,23 @@ Button logout;
             }
         });
 
-            logout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(MainActivity.this,Login.class);
-                    startActivity(i);
-                    finish();
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,Login.class);
+                startActivity(i);
+                finish();
 
-                }
-            });
+            }
+        });
+
+    fooddata.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent inte = new Intent(MainActivity.this,FoodOrders.class);
+            startActivity(inte);
+        }
+    });
 
     }
 

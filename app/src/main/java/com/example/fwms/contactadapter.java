@@ -19,7 +19,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
     Context context;
     List<Contacts> contactsList;
     RecyclerView recyclerView;
-    Button listofguest;
+
 
     final View.OnClickListener onClickListener = new MyonClickListener();
     public  static class ViewHolder extends RecyclerView.ViewHolder{
@@ -31,7 +31,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             TextView rowcontact;
             TextView rowdesc;
             TextView rowloca;
-            Button getlistguest;
+            Button guestlist;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -42,7 +42,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             rowcontact = itemView.findViewById(R.id.econtactview);
             rowdesc = itemView.findViewById(R.id.edescview);
             rowloca = itemView.findViewById(R.id.evlocation);
-            getlistguest = itemView.findViewById(R.id.guestlist);
+            guestlist= itemView.findViewById(R.id.guestlist);
 
         }
     }
@@ -73,14 +73,16 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
         holder.rowcontact.setText(""+contact.getEvent_contact());
         holder.rowdesc.setText(""+contact.getEvent_describtiont());
         holder.rowloca.setText(""+contact.getEvent_location());
-        holder.getlistguest.setOnClickListener(new View.OnClickListener() {
+        holder.guestlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context,Guestdata.class);
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
+
             }
         });
+
 
     }
 

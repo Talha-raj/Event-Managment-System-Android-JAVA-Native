@@ -111,6 +111,8 @@ public class UserDatabasehelper extends SQLiteOpenHelper {
         return attrStr;
     }
 
+
+
 //    public String getUsername(){
 //        SQLiteDatabase db = this.getReadableDatabase();
 //    /*Cursor cursor = db.query(TABLE, new String[] {COLUMN_USERNAME, COLUMN_PASSWORD}, COLUMN_USERNAME , null, null, null, null);
