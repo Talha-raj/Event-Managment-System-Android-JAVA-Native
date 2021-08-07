@@ -30,7 +30,9 @@ public class ViewEvent extends AppCompatActivity {
         rview = findViewById(R.id.viewevent);
         rview.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
-        contactsAdapter = new contactadapter(this,contactsList , rview);
+
+        contactsAdapter = new contactadapter(this,contactsList,rview,getApplicationContext());
+
         rview.setAdapter(contactsAdapter);
         rview.setLayoutManager(layoutManager);
 

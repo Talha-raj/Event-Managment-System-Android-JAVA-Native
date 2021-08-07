@@ -1,6 +1,7 @@
 package com.example.fwms;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
     List<Contacts> contactsList;
     RecyclerView recyclerView;
     Button listofguest;
+
     final View.OnClickListener onClickListener = new MyonClickListener();
     public  static class ViewHolder extends RecyclerView.ViewHolder{
             TextView rowId;
@@ -29,7 +31,7 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             TextView rowcontact;
             TextView rowdesc;
             TextView rowloca;
-
+            Button getlistguest;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -40,14 +42,15 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             rowcontact = itemView.findViewById(R.id.econtactview);
             rowdesc = itemView.findViewById(R.id.edescview);
             rowloca = itemView.findViewById(R.id.evlocation);
-
+            getlistguest = itemView.findViewById(R.id.guestlist);
 
         }
     }
-    public contactadapter(Context context, List<Contacts> contactsList, RecyclerView rview){
-        this.context = context;
+    public contactadapter(Context context, List<Contacts> contactsList, RecyclerView rview, Context applicationContext){
+        this.context = applicationContext;
         this.contactsList = contactsList;
         this.recyclerView = rview;
+
     }
 
     @NonNull
@@ -70,7 +73,14 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
         holder.rowcontact.setText(""+contact.getEvent_contact());
         holder.rowdesc.setText(""+contact.getEvent_describtiont());
         holder.rowloca.setText(""+contact.getEvent_location());
-
+        holder.getlistguest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context,Guestdata.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
+            }
+        });
 
     }
 
