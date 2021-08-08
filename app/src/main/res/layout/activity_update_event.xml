@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_gravity="center|top"
     android:layout_height="match_parent"
     tools:context=".CreateEvent">
@@ -14,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="67dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Create Event"
+        android:text="Update Event"
         android:textAlignment="center"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,7 @@
 
 
     <EditText
-        android:id="@+id/etypeupdate"
+        android:id="@+id/enameupdate"
         android:layout_width="410dp"
         android:layout_height="70dp"
         android:hint="Event Type"
@@ -31,7 +32,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/enameupdate"
+        android:id="@+id/etypeupdate"
         android:layout_width="410dp"
         android:layout_height="70dp"
         android:hint="Event Name"
@@ -39,13 +40,14 @@
         android:textSize="20dp" />
 
 
-    <EditText
+    <DatePicker
         android:id="@+id/etimeupdate"
         android:layout_width="410dp"
-        android:layout_height="70dp"
+        android:layout_height="73dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
         android:hint="Event Date/time"
         android:inputType="datetime"
-        android:textAlignment="center"
         android:textSize="20dp" />
 
     <EditText
@@ -69,7 +71,7 @@
     <EditText
         android:id="@+id/edesupdate"
         android:layout_width="match_parent"
-        android:layout_height="136dp"
+        android:layout_height="100dp"
         android:gravity="top|left"
         android:hint="Description..."
         android:inputType="textMultiLine"

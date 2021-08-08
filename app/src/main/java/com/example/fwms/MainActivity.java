@@ -3,6 +3,7 @@ package com.example.fwms;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView mangaevent,fooddata;
     ImageButton jumper;
     Button logout;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         logout=findViewById(R.id.buttonlog);
         jumper=findViewById(R.id.jumplogin);
         fooddata=findViewById(R.id.foodmenue);
+        sharedPreferences=getSharedPreferences("DATA",MODE_PRIVATE);
+        editor=sharedPreferences.edit();
         mangaevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                editor.clear();
+                editor.apply();
                 Intent i = new Intent(MainActivity.this,Login.class);
                 startActivity(i);
                 finish();

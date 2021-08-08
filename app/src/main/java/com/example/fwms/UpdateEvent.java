@@ -9,17 +9,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class UpdateEvent extends AppCompatActivity {
 Button update_btn;
-EditText eventtypeup,eventnameup,eventdattimeup,noofguesup,contactup,describtionup,eventidup;
+EditText eventtypeup,eventnameup,noofguesup,contactup,describtionup,eventidup;
+DatePicker eventdattimeup;
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_update_event);
         update_btn=findViewById(R.id.eventdoneupdate);
         eventtypeup=findViewById(R.id.etypeupdate);
@@ -39,18 +42,17 @@ EditText eventtypeup,eventnameup,eventdattimeup,noofguesup,contactup,describtion
 
                 String typename =eventtypeup.getText().toString();
                 String ename = eventnameup.getText().toString();
-                String etime = eventdattimeup.getText().toString();
+                String etime = eventdattimeup.getDayOfMonth() + "/" + eventdattimeup.getMonth() + "/" + eventdattimeup.getYear();
                 String guest= noofguesup.getText().toString();
                 String contactu =contactup.getText().toString();
                 String edesc =describtionup.getText().toString();
                 db=openHelper.getWritableDatabase();
-                if(eventtypeup.length() !=0 && eventnameup.length() !=0 && eventdattimeup.length() !=0
+                if(eventtypeup.length() !=0 && eventnameup.length() !=0
                         && noofguesup.length() !=0 && contactup.length() !=0 && describtionup.length() !=0) {
                     updateData(typename, ename, etime, guest, contactu, edesc);
                     Toast.makeText(getApplicationContext(), "Event UPDATED SUCCESSFULLY", Toast.LENGTH_LONG).show();
                     eventnameup.setText("");
                     eventtypeup.setText("");
-                    eventdattimeup.setText("");
                     noofguesup.setText("");
                     contactup.setText("");
                     describtionup.setText("");
