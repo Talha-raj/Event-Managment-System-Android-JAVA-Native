@@ -83,6 +83,16 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             }
         });
 
+        holder.rowcontact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,Google_Maps.class);
+                intent.putExtra("locationdata",holder.rowcontact.getText().toString());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+
 
     }
 

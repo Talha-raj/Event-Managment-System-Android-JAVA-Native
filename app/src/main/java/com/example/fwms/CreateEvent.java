@@ -126,7 +126,7 @@ public class CreateEvent extends AppCompatActivity {
                     try {
                         Geocoder geocoder = new Geocoder(CreateEvent.this, Locale.getDefault());
                         List<Address> addresses = geocoder.getFromLocation(llocation.getLatitude(),llocation.getLongitude(),1);
-                        Event_location.setText(addresses.get(0).getLatitude()+","+addresses.get(0).getLongitude());
+                        Event_location.setText(addresses.get(0).getLatitude()+"+-"+addresses.get(0).getLongitude());
                         Event_location.setEnabled(false);
                     } catch (IOException e) {
                         e.printStackTrace();

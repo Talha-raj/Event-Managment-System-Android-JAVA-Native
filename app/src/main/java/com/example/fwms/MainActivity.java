@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView mangaevent,fooddata;
+    ImageView mangaevent,fooddata,location;
     ImageButton jumper;
     Button logout;
     SharedPreferences sharedPreferences;
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         mangaevent=findViewById(R.id.imageViewe);
         logout=findViewById(R.id.buttonlog);
+        location=findViewById(R.id.locationimg);
         jumper=findViewById(R.id.jumplogin);
         fooddata=findViewById(R.id.foodmenue);
         sharedPreferences=getSharedPreferences("DATA",MODE_PRIVATE);
@@ -65,7 +66,14 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
-    }
+    location.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(MainActivity.this,Google_Maps.class);
+            startActivity(i);
+        }
+    });
 
+    }
 
 }
