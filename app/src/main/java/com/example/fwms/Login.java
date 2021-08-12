@@ -102,7 +102,6 @@ public class Login extends AppCompatActivity {
                     editor.putString("password", Pass);
                     editor.putBoolean("isLoggedIn", true);
                     editor.apply();
-
                     Intent intent = new Intent(Login.this,MainActivity.class);
                     startActivity(intent);
                     finish();

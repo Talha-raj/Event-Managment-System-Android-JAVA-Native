@@ -48,10 +48,17 @@ public class UserRegister extends AppCompatActivity {
                 String newEntryemail = useremail.getText().toString();
                 String newEntrycontact = usercontact.getText().toString();
                 String newEntrypassword = userpassword.getText().toString();
+                String newEntryinvitwe = "NO Invites";
+                String newEntrynamev = "";
+                String newEntrydate = "";
+                String newEntrylocation = "";
+                String newEntrycontactv = "";
+                String newEntrydesc = "";
+
 
 
                 if(mAwesomeValidation.validate()){
-                    Adduserdata(newEntryname,newEntryemail,newEntrypassword,newEntrycontact);
+                    Adduserdata(newEntryname,newEntryemail,newEntrypassword,newEntrycontact,newEntryinvitwe,newEntrynamev,newEntrydate,newEntrylocation,newEntrycontactv,newEntrydesc);
 
                 }
                 else {
@@ -63,9 +70,9 @@ public class UserRegister extends AppCompatActivity {
 
 
 
-    private void Adduserdata(String newEntryname, String newEntryemail, String newEntrypassword, String newEntrycontact) {
+    private void Adduserdata(String newEntryname, String newEntryemail, String newEntrypassword, String newEntrycontact,String newEntryinvitwe,String newEntrynamev,String newEntrydate,String newEntrylocation,String newEntrycontactv,String newEntrydesc) {
 
-        boolean insertData = mDatabaseHelper.addData(newEntryname,newEntryemail,newEntrycontact,newEntrypassword);
+        boolean insertData = mDatabaseHelper.addData(newEntryname,newEntryemail,newEntrycontact,newEntrypassword,newEntryinvitwe,newEntrynamev,newEntrydate,newEntrylocation,newEntrycontactv,newEntrydesc);
 
         if(insertData){
             showtoast("Account Created Successfully ");

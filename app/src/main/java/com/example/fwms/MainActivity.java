@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView mangaevent,fooddata,location;
+    ImageView mangaevent,fooddata,location,guestlistview;
     ImageButton jumper;
     Button logout;
     SharedPreferences sharedPreferences;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         location=findViewById(R.id.locationimg);
         jumper=findViewById(R.id.jumplogin);
         fooddata=findViewById(R.id.foodmenue);
+        guestlistview=findViewById(R.id.Guests);
         sharedPreferences=getSharedPreferences("DATA",MODE_PRIVATE);
         editor=sharedPreferences.edit();
         mangaevent.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
     });
+
+guestlistview.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent inte = new Intent(MainActivity.this,GuestAccept.class);
+        startActivity(inte);
+    }
+});
 
     }
 

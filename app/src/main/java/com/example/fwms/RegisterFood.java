@@ -59,6 +59,7 @@ public class RegisterFood extends AppCompatActivity {
         if(insertData){
             showtoast("Order Registred");
             Intent in = new Intent(RegisterFood.this,UserDashboard.class);
+            in.putExtra("guestname",guestname.getText().toString());
             startActivity(in);
             finish();
         }

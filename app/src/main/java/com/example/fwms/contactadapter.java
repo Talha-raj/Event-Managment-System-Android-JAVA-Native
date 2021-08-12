@@ -1,5 +1,6 @@
 package com.example.fwms;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -77,6 +78,12 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context,Guestdata.class);
+                i.putExtra("eventname",holder.rowename.getText().toString());
+                i.putExtra("eventtype",holder.rowetypename.getText().toString());
+                i.putExtra("eventdate",holder.rowdatetime.getText().toString());
+                i.putExtra("eventcontact",holder.rowcontact.getText().toString());
+                i.putExtra("eventdesc",holder.rowdesc.getText().toString());
+                i.putExtra("eventlocation",holder.rowloca.getText().toString());
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
 
@@ -112,4 +119,5 @@ public class contactadapter extends RecyclerView.Adapter<contactadapter.ViewHold
 
 
     }
+    
 }

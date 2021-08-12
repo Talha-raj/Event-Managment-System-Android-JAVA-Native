@@ -86,4 +86,45 @@ public class FoodDataBasehelper extends SQLiteOpenHelper {
 
     }
 
+
+    public List<String> getguestlist(){
+        String query = "SELECT " + COl3 + "  FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        List<String> attrStr = new Vector<String>();
+        if (cursor.moveToFirst()) {
+            do {
+                attrStr.add(cursor.getString(cursor.getColumnIndex(COl3)));
+                Arrays.toString(new List[]{attrStr});
+            } while (cursor.moveToNext());
+        }
+        while (cursor.moveToNext()) {
+
+        }
+        return attrStr;
+    }
+
 }
+
+
+//
+//    public List<String> getData(int input) {
+//        String query = "SELECT " + COl2 + "  FROM " + TABLE_NAME;
+//        SQLiteDatabase db = this.getReadableDatabase();
+//        Cursor cursor = db.rawQuery(query, null);
+//
+//        List<String> attrStr = new Vector<String>();
+//
+//        if (cursor.moveToFirst()) {
+//            do {
+//                attrStr.add(cursor.getString(cursor.getColumnIndex(COl2)));
+//                Arrays.toString(new List[]{attrStr});
+//            } while (cursor.moveToNext());
+//        }
+//        while (cursor.moveToNext()) {
+//
+//        }
+//        return attrStr;
+//    }
+
+

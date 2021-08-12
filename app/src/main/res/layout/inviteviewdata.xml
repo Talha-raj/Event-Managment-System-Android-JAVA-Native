@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="6dp"
+    android:padding="12dp"
+    android:background="@drawable/invitationfixed"
+    android:layout_height="350dp">
+
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Type"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/eventnamei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="cursive"
+        android:text="Event Type"
+        android:textSize="26sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Name " />
+
+    <TextView
+        android:id="@+id/evennametinvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Name " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact" />
+
+    <TextView
+        android:id="@+id/dateinvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location" />
+
+    <TextView
+        android:id="@+id/contactinvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="location" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Date" />
+    <TextView
+        android:id="@+id/locationinvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date " />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description" />
+    <TextView
+        android:id="@+id/descinvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description" />
+
+
+    <Button
+        android:id="@+id/foodbtn"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="Accept"
+        app:backgroundTint="@color/goldy" />
+
+
+
+</LinearLayout>
