@@ -8,6 +8,9 @@
     tools:context=".UserDashboard">
 
     <TextView
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@android:color/holo_blue_dark"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="Welcome FWMS User Dashobard"

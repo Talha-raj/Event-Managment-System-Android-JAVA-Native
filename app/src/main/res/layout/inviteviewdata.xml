@@ -10,7 +10,6 @@
     android:layout_height="350dp">
 
 
-
     <TextView
         android:layout_gravity="center"
         android:layout_width="wrap_content"

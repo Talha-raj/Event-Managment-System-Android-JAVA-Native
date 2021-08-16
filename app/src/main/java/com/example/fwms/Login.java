@@ -27,7 +27,7 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
     Button btnlogin;
     EditText getemail,getpassword;
-    TextView already;
+    TextView already,userjump;
     ConnectivityManager mmanager;
     SharedPreferences sh;
     SharedPreferences.Editor editor;
@@ -43,6 +43,7 @@ public class Login extends AppCompatActivity {
         getemail=findViewById(R.id.check_email);
         getpassword=findViewById(R.id.check_pass);
         already = findViewById(R.id.createacc);
+        userjump=findViewById(R.id.userjump);
         sh=getSharedPreferences("DATA",MODE_PRIVATE);
         editor=sh.edit();
         getemail.setText(sh.getString("email",""));
@@ -56,6 +57,14 @@ public class Login extends AppCompatActivity {
             return;
         }
 
+        userjump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Login.this,UserLogin.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override

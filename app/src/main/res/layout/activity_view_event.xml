@@ -3,8 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ViewEvent">
+    <TextView
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Current Events"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="40dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/viewevent"

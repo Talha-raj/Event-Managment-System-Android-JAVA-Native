@@ -74,7 +74,8 @@
             android:layout_height="50dp"
             android:text="I Already Have an Account "
             android:textAlignment="center"
-            android:textSize="25dp" />
+            android:textSize="20dp" />
+
     </LinearLayout>
 
 </RelativeLayout>

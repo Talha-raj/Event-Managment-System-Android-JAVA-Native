@@ -23,6 +23,7 @@ public class FoodOrders extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_food_orders);
         fdbhelper = new FoodDataBasehelper(FoodOrders.this);
         foodlists = fdbhelper.getAllcontacts();

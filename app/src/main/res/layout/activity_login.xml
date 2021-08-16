@@ -6,7 +6,7 @@
     android:background="@drawable/backgroundnew"
     android:layout_height="match_parent"
     tools:context=".Login">
-    
+
     <TextView
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif-smallcaps"
@@ -62,6 +62,13 @@
             android:text="I don't have an Account"
             android:textAlignment="center"
             android:textSize="20dp" />
+        <TextView
+            android:id="@+id/userjump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or Login as User"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
 
     </LinearLayout>
 </RelativeLayout>

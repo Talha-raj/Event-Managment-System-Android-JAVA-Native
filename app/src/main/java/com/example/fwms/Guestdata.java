@@ -49,7 +49,7 @@ public class Guestdata extends AppCompatActivity {
                 String eventlocation = getIntent().getExtras().getString("eventlocation");
                 String eventcontact = getIntent().getExtras().getString("eventcontact");
                 String eventdesc = getIntent().getExtras().getString("eventdesc");
-               String uname = data.get(position);
+                String uname = data.get(position);
                 updateuser(eventname,uname,eventtype,eventdate,eventlocation,eventcontact,eventdesc);
                 Toast.makeText(Guestdata.this,"Invite sent to" + data.get(position), Toast.LENGTH_SHORT).show();
             }
